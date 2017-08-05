@@ -1,0 +1,44 @@
+{
+    "author": "knod",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+		"name": "Reflow test",
+        "default_title": "Reflow test"
+    },
+    "content_scripts": [
+        {
+            "css": [
+            ],
+            "js": [
+                "main.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*",
+                "<all_urls>"
+            ]
+        }
+    ],
+    "description": "force reflow test",
+    "icons": {
+    },
+    "manifest_version": 2,
+    "name": "Reflow test",
+    "offline_enabled": true,
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+		"storage",
+        "webNavigation",
+        "<all_urls>"
+    ],
+    "short_name": "Reflow test",
+    "version": "0.1.2",
+	"web_accessible_resources": [
+        "*.css"
+	]
+}
